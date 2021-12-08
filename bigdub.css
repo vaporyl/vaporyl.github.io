@@ -1,0 +1,84 @@
+body{
+    background-image: url("img/liluzi.png");
+    background-repeat: repeat-y;
+}
+
+.header{
+    color:white;
+    font-size:100px;
+    position:fixed;
+    text-align:center;
+    width:100%;
+    background-color:blueviolet;
+    font-family: fantasy;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.sidebar{
+    color:white;
+    font-size:50px;
+    position:fixed; /*this layout style makes it so that the sidebar stays with you as you scroll*/
+    text-align:center;
+    width:15%;
+    background-color:violet;
+    font-family: fantasy;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height:100%;
+    line-height: 3;
+    padding-top: 20px;
+}
+
+.text{
+    color:black;
+    font-size:30px;
+    position:relative; /*this layout style makes it so that the text moves as you scroll so that you can look at content farther down on the page without it being in the way*/
+    text-align:center;
+    font-family:fantasy;
+    top:110px;
+    -webkit-text-stroke: 0.5px white;
+
+}
+
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+
+/*pseudo class being used, as when links are hovered over they turn purple, or blue violet*/
+a:hover {
+    color:blueviolet;
+}
+
+/*this is where anything using the table element will inheret these traits*/
+table {
+    background-color:violet;
+    border-collapse: collapse;
+    border-top: 10px solid; 
+    position: fixed;
+    font-family: fantasy;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    top:200px;
+    right:480px;
+    font-size: 30px;
+    text-align:center;
+}
+
+td {
+    border: 2px solid;
+   }
+
+.menu{
+    width: 30%;
+    right: 680px;
+}
+
+/*this is where the text class is being overwritten*/
+#contact {
+    font-size: 50px;
+}

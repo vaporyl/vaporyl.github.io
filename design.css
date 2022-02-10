@@ -1,5 +1,5 @@
 body{
-    background-image: url("img/pencils.png");
+    background-image: url("img/bg2.jpg");
     background-repeat: repeat-y;
     background-size: 1920px, 1080px;
     
@@ -12,7 +12,7 @@ body{
     text-align:center;
     width:100%;
     background-color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     z-index: 1;
     top: 0;
     left: 0;
@@ -24,19 +24,14 @@ body{
     position:fixed;
     text-align:center;
     width:10%;
-    background-color: cyan;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(255, 138, 216);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     z-index: 1;
     left: 0;
     top: 0;
     height:100%;
-    line-height: 3;
+    line-height: 8;
     padding-top: 20px;
-}
-
-#support{
-    padding-top: 280px;
-    font-size:15px;
 }
 
 .text{
@@ -44,23 +39,22 @@ body{
     font-size:30px;
     position:relative;
     text-align:center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     top:110px;
 }
 
-#hook{
-    font-size: 50px;
+.login {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    top: 200px;
+    text-align:center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:30px;
 }
 
-.colour{
-    text-align:center;
-    position:relative;
-    padding-top:70px;
-}
-
-.quantity{
-    text-align:center;
-    position:relative;
+#subtext {
+    margin-top: -30px;
 }
 
 a, a:visited, a:active {
@@ -69,5 +63,5 @@ a, a:visited, a:active {
    }
 
 a:hover {
-    color: blue;
+    color: rgb(255, 65, 192);
 }

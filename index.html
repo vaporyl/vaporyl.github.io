@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 
-
-
 <html>
     <head>
-        <title>Home</title>
+        <title>Login</title>
         <meta charset="UTF-8">
-        <meta name= "Home" content= "The Digital Pencil">
+        <meta name= "Login" content= "Login">
         <link rel= "stylesheet" href= "design.css">
     </head>
 
     <body>
-
         <div class="header">
-            <h>The Digital Pencil</h>
-            <a href="index.html"><img src = "img/mmdd.png"style = "width: 6%; height: 6%;"> </a>
+            <h>Big Win</h>
+            <a href="index.html"><img src = "img/me.png"style = "width: 6%; height: 6%;"> </a>
         </div>
 
-        <div class="sidebar">
-            <a href="index.html"><p>Home</p></a>
-            <a href="desc.html"><p>Description</p>
-            <a href="buy.html"><p>Purchase</p></a>
+        <div class="login">
+            <h1>Login</h1>
+            <p id="subtext">Hint: the password is "bingus"</p>
+            <input type="text" id="password">
+            <!--creating the input box for the login-->
             <br>
-            <p id="support">To contact The Digital Pencil<br> team please email us at<br> thedigitalpencil@support.com</p>
+            <button id="button">Enter</button>
+            <!--creating the submission button for the login-->
         </div>
 
-        <div class="text">
-            <p>THE FINEST PENCILS IN ALL OF THE LAND</p>
-            <img src = "img/hero.jpg"style = "width: 40%; height: 40%">
-            <br>
-            <p>These are the pencils of the future!</p>
+        <script>
 
-        </div>
+            var password = document.getElementById("password");
+            //creating a variable for the text inputted
+            var button = document.getElementById("button");
+            //creating a variable for the submission button
 
-    </body>
-          
+            button.addEventListener("click", function() {
+                //creating a statement that checks the text upon clicking the button
+                if(password.value == "bingus")
+                //dictating what happens if the text submitted is as specified
+                {
+                    console.log("Login Successful.");
+                    //makes a console note that the text was as specified
+                    window.open ("javamain.html");
+                    //opens the main page after submission
+                    window.close("index.html");
+                    //closes the login window
+                }
+                else {
+                    console.log("Incorrect Password.");
+                    //makes a console note that the text was not as specified
+                    alert ("Incorrect Password.");
+                    //tells the user the password was incorrect
+                }
+            });
 
-</html>
+        </script>
+        
+    </body>  
+
+    </html>

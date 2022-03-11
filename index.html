@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 
+
+
 <html>
     <head>
-        <title>Login</title>
+        <title>Home</title>
         <meta charset="UTF-8">
-        <meta name= "Login" content= "Login">
+        <meta name= "Home" content= "Cool stuff inside">
         <link rel= "stylesheet" href= "design.css">
     </head>
 
     <body>
+
         <div class="header">
-            <h>Big Win</h>
-            <a href="index.html"><img src = "img/me.png"style = "width: 6%; height: 6%;"> </a>
+            <p>Funny Cats:</p>
         </div>
 
-        <div class="login">
-            <h1>Login</h1>
-            <p id="subtext">Hint: the password is "bingus"</p>
+        <div class="cats">
+            <img src = "img/bingus.jpg"style = "width: 20%; height: 20%" onmouseover="this.src='img/bingus2.png'" onmouseout="this.src='img/bingus.jpg'" />
+            <!--creates an image and makes it change when the cursor hovers overtop, and returns to its original state when the cursor leaves-->
+            <img src = "img/jinx.png"style = "width: 20%; height: 20%" onmouseover="this.src='img/jinx2.png'" onmouseout="this.src='img/jinx.png'" />
+        </div>
+
+        <div class="select">
+            <div class="header">
+                <p id="header2">SELECT ONE</p>
+            </div>
+            <p id="subtext">(left one is "bingus" & right one is "jinx")</p>
             <input type="text" id="password">
             <!--creating the input box for the login-->
             <br>
-            <button id="button">Enter</button>
+            <button id="button">Select</button>
             <!--creating the submission button for the login-->
         </div>
 
         <script>
+            alert ("Funny Cats OTW, Continue?");
+            //creates an alert when the website is opened
 
             var password = document.getElementById("password");
             //creating a variable for the text inputted
             var button = document.getElementById("button");
             //creating a variable for the submission button
+            var audio = new Audio('mp3/jinxbeat.mp3');
+            //creating a variable for audio
+            var audio2 = new Audio('mp3/bingusbeat.mp3');
 
             button.addEventListener("click", function() {
                 //creating a statement that checks the text upon clicking the button
                 if(password.value == "bingus")
                 //dictating what happens if the text submitted is as specified
                 {
-                    console.log("Login Successful.");
-                    //makes a console note that the text was as specified
-                    window.open ("javamain.html");
-                    //opens the main page after submission
-                    window.close("index.html");
-                    //closes the login window
+                    audio2.play();
+                    //plays audio from designated variable
+                    audio2.volume = 0.1;
+                    //changes the volume of the audio
+                    alert ("what a silly little cat!")
+                }
+                else if(password.value == "jinx")
+                {
+                    audio.play();
+                    audio.volume = 0.1;
+                    alert ("you just chose a silly cat no lie")
                 }
                 else {
-                    console.log("Incorrect Password.");
-                    //makes a console note that the text was not as specified
-                    alert ("Incorrect Password.");
-                    //tells the user the password was incorrect
+                    alert ("do you not like funny cats? pick one silly!")
                 }
             });
-
         </script>
-        
-    </body>  
-
-    </html>
+    </body>

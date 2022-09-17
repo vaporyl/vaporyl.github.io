@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<!--code will begin by identifying the meta data that shows when your website is discovered online-->
+<!--code will create text asking the question, as well as an input source and a button used to submit the information in the input-->
+<!--code will create ids that can be used to communicate with javascript to create useable variables-->
+<!--code will begin using inline javascript to create variables from the html input-->
+<!--code will use the variables submitted to determine a response via an if else statement-->
+<!--code will check the value of the number inputted and give an alert declaring what the individual is legally able to do in the province of Ontario-->
+
 <html>
     <head>
         <title>Age Check</title>
@@ -16,22 +23,16 @@
 
         <div class="select">
             <input type="text" id="age">
-            <!--creating the input box for the login-->
             <br>
             <button id="button">Select</button>
-            <!--creating the submission button for the login-->
         </div>
 
         <script>
             var age = document.getElementById("age");
-            //creating a variable for the text inputted
             var button = document.getElementById("button");
-            //creating a variable for the submission button
 
             button.addEventListener("click", function() {
-                //creating a statement that checks the text upon clicking the button
                 if(age.value == 18)
-                //dictating what happens if the text submitted is as specified
                 {
                     alert ("You are old enough to fully drive!")
                 }

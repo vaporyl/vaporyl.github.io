@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 
-
-
 <html>
     <head>
-        <title>Home</title>
+        <title>Age Check</title>
         <meta charset="UTF-8">
-        <meta name= "Home" content= "Cool stuff inside">
+        <meta name= "Home" content= "Age Check">
         <link rel= "stylesheet" href= "design.css">
     </head>
 
     <body>
 
         <div class="header">
-            <p>Funny Cats:</p>
-        </div>
-
-        <div class="cats">
-            <img src = "img/bingus.jpg"style = "width: 20%; height: 20%" onmouseover="this.src='img/bingus2.png'" onmouseout="this.src='img/bingus.jpg'" />
-            <!--creates an image and makes it change when the cursor hovers overtop, and returns to its original state when the cursor leaves-->
-            <img src = "img/jinx.png"style = "width: 20%; height: 20%" onmouseover="this.src='img/jinx2.png'" onmouseout="this.src='img/jinx.png'" />
+            <p>What is your age?</p>
         </div>
 
         <div class="select">
-            <div class="header">
-                <p id="header2">SELECT ONE</p>
-            </div>
-            <p id="subtext">(left one is "bingus" & right one is "jinx")</p>
-            <input type="text" id="password">
+            <input type="text" id="age">
             <!--creating the input box for the login-->
             <br>
             <button id="button">Select</button>
@@ -35,36 +23,32 @@
         </div>
 
         <script>
-            alert ("Funny Cats OTW, Continue?");
-            //creates an alert when the website is opened
-
-            var password = document.getElementById("password");
+            var age = document.getElementById("age");
             //creating a variable for the text inputted
             var button = document.getElementById("button");
             //creating a variable for the submission button
-            var audio = new Audio('mp3/jinxbeat.mp3');
-            //creating a variable for audio
-            var audio2 = new Audio('mp3/bingusbeat.mp3');
 
             button.addEventListener("click", function() {
                 //creating a statement that checks the text upon clicking the button
-                if(password.value == "bingus")
+                if(age.value == 18)
                 //dictating what happens if the text submitted is as specified
                 {
-                    audio2.play();
-                    //plays audio from designated variable
-                    audio2.volume = 0.1;
-                    //changes the volume of the audio
-                    alert ("what a silly little cat!")
+                    alert ("You are old enough to fully drive!")
                 }
-                else if(password.value == "jinx")
+                else if(age.value > 18)
                 {
-                    audio.play();
-                    audio.volume = 0.1;
-                    alert ("you just chose a silly cat no lie")
+                    alert ("You are old enough to drink, enter a casino, and drive!")
+                }
+                else if(age.value == 16)
+                {
+                    alert ("You are old enough to get your G1 license!")
+                }
+                else if(age.value == 17)
+                {
+                    alert ("You are old enough to get your G2 license!")
                 }
                 else {
-                    alert ("do you not like funny cats? pick one silly!")
+                    alert ("You can't drive, drink, or enter a casino just yet!")
                 }
             });
         </script>

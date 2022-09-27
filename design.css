@@ -27,38 +27,34 @@ body {
     }
 }
 
-.header{
-    color: white;
-    font-size:50px;
-    position:relative;
+.swag{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align:center;
-    width:100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    margin-top:200px;
-    margin-bottom:-70px;
 }
 
-.select {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    top: 100px;
-    text-align:center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size:30px;
+.chat{
+    width:99.66%;
+    background-color:transparent;
 }
 
-button {
-    color: white;
-    background-color:black;
-}
-
-button:hover {
-    -webkit-animation: bg 10s infinite;
-    animation: bg 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-}
+.box {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .box .inner {
+    height: 200px;
+    overflow-y: auto;
+  }
+  
+  .box .inner .message {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    margin: 2px 2px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  input {
+    border-radius: 3px;
+  }

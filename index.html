@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 
-<!--code will begin by identifying the meta data that shows when your website is discovered online-->
-<!--code will create text asking the question, as well as an input source and a button used to submit the information in the input-->
-<!--code will create ids that can be used to communicate with javascript to create useable variables-->
-<!--code will begin using inline javascript to create variables from the html input-->
-<!--code will use the variables submitted to determine a response via an if else statement-->
-<!--code will check the value of the number inputted and give an alert declaring what the individual is legally able to do in the province of Ontario-->
+<!--code will create boxes and area for text input -->
+<!--code will assign variables to be used in javascript -->
+<!--code will call upon jquery and make it useable -->
+<!--code will create function for when text is submitted -->
+<!--code will assign variables to submitted text -->
+<!--code will use variables to print new messages -->
+<!--code will attach new text to chat box -->
 
 <html>
     <head>
-        <title>Age Check</title>
+        <title>SwagChat</title>
         <meta charset="UTF-8">
-        <meta name= "Home" content= "Age Check">
+        <meta name= "Home" content= "SwagChat">
         <link rel= "stylesheet" href= "design.css">
     </head>
 
-    <body>
+    <div id="convo">
+      <h1 class="swag">SwagChat</h1>
 
-        <div class="header">
-            <p>What is your age?</p>
-        </div>
+    <div class="box">
+      <div class="inner">
+      </div>
+    </div>
 
-        <div class="select">
-            <input type="text" id="age">
-            <br>
-            <button id="button">Select</button>
-        </div>
+    <form>
+      <input placeholder="Press Enter to send!" class="chat"></input>
+    </form>
 
-        <script>
-            var age = document.getElementById("age");
-            var button = document.getElementById("button");
+  </div>
 
-            button.addEventListener("click", function() {
-                if(age.value == 18)
-                {
-                    alert ("You are old enough to fully drive!")
-                }
-                else if(age.value > 18)
-                {
-                    alert ("You are old enough to drink, enter a casino, and drive!")
-                }
-                else if(age.value == 16)
-                {
-                    alert ("You are old enough to get your G1 license!")
-                }
-                else if(age.value == 17)
-                {
-                    alert ("You are old enough to get your G2 license!")
-                }
-                else {
-                    alert ("You can't drive, drink, or enter a casino just yet!")
-                }
-            });
-        </script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+        $('form').submit(function(e) {
+
+          e.preventDefault();
+          let getMsg = $('input').val();
+
+          if( getMsg !== '') {
+
+            let newMsg = "<p class='message'>" + getMsg + "</p>"
+            $('.box .inner').append(newMsg);
+            $('input').val("");
+          }
+        });
+
+      });
+    </script>
+
+</html>
